@@ -85,6 +85,25 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
+  Future<void> actualizarProductos(String id) async {
+    try {
+      final nombre = _nombre.text.trim();
+      final precio = double.tryParse(_precio.text.trim());
+      // Accede a la colección 'productos' y obtiene todos los documentos
+      // Transforma los documentos en una lista de mapas
+      await FirebaseFirestore.instance.collection('Productos').doc(id).update({
+        'nombre': nombre,
+        'precio': precio,
+      });
+
+      _nombre.clear();
+      _precio.clear();
+
+    } catch (e) {
+      print('Error al obtener productos: $e');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
