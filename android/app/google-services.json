@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "621883590035",
+    "project_id": "semana7-43d8c",
+    "storage_bucket": "semana7-43d8c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621883590035:android:b2755f3b3a18e075aa5466",
+        "android_client_info": {
+          "package_name": "com.example.semana7_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmBi2MqJpzaSLcPGCZbfWr0nvshza3WZ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
