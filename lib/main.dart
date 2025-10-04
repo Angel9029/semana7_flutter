@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:semana7_flutter/home_screen.dart';
-import 'package:semana7_flutter/ubications_screen.dart';
-import 'package:semana7_flutter/clients_screen.dart';
+import 'package:semana7_flutter/menu_screen.dart';
+import 'package:semana7_flutter/providers_screen.dart';
+import 'package:semana7_flutter/employees_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
@@ -34,9 +34,9 @@ class _BottomNavState extends State<BottomNav> {
   int _seleccion = 0;
 
   final List<Widget> _pantallas = const [
-    HomeScreen(),
-    ClientsScreen(),
-    UbicationsScreen(),
+    MenuScreen(),
+    EmployeesScreen(),
+    ProvidersScreen(),
   ];
 
   void _onItemSelected(int item) {
@@ -54,16 +54,16 @@ class _BottomNavState extends State<BottomNav> {
         onTap: _onItemSelected,
         items: const [ 
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Inicio"
+            icon: Icon(Icons.restaurant_menu),
+            label: "Menu y platillos"
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.people),
-            label: "Clientes"
+            label: "Empleados"
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.map),
-            label: "Ubicaciones"
+            icon: Icon(Icons.fire_truck),
+            label: "Proveedores"
           ),
          ]
         ),
